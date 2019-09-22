@@ -1,7 +1,9 @@
-import discord
-import arrow
+import os
 
-token = "NjIzOTU5MDI5NTU0NjEwMTg4.XYKEVQ.5J80GoNUjpIUzb7iQwE-cXrbY3w"
+import arrow
+import discord
+
+token = os.getenv("DISORD_TOKEN")
 
 client = discord.Client()
 
