@@ -1,6 +1,6 @@
 FROM python:3-alpine
 
-ENV TOKEN ""
+ENV DISCORD_TOKEN ""
 
 WORKDIR /app
 
