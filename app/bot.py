@@ -4,7 +4,6 @@ import arrow
 import discord
 
 token = os.getenv("DISCORD_TOKEN")
-print(token)
 
 client = discord.Client()
 
