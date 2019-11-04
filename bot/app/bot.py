@@ -44,7 +44,7 @@ async def on_message(message):
     if message.content == "/time":
         await seoul_swiss_time(message)
 
-    if message.content == "/time":
+    if message.content == "/help":
         await message.channel.send("Ne sois pas un retard")
 
 
