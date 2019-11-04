@@ -44,5 +44,8 @@ async def on_message(message):
     if message.content == "/time":
         await seoul_swiss_time(message)
 
+    if message.content == "/time":
+        await message.channel.send("Ne sois pas un retard")
+
 
 client.run(token)
