@@ -2,6 +2,7 @@ import os
 
 import arrow
 import discord
+import random
 
 token = os.getenv("DISCORD_TOKEN")
 
@@ -47,5 +48,17 @@ async def on_message(message):
     if message.content == "/help":
         await message.channel.send("Ne sois pas un retard")
 
+    if message.content.startswith("/rand"):
+        rand_array = [1, 100]
+        message_content = message.content
+        args = message_content.split(" ")
+        if len(args) > 1:
+            rand_array = args[1].split('-')
+        try:
+            result = random.randint(int(rand_array[0]), int(rand_array[1]))
+        except ValueError:
+            await message.channel.send("Arrête de faire le retard et utilise moi correctement")
+            return
+        await message.channel.send(result)
 
 client.run(token)
